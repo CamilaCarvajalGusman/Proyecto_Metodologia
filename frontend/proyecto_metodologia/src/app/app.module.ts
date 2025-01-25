@@ -1,9 +1,11 @@
-import { BrowserModule } from '@angular/platform-browser';
+
 import { AppRoutingModule } from './app-routing.module';
+import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home.component';
 import { SelectTypeUserComponent } from './select_type_user.component';
 import { IniciarSesionComponent } from './iniciar_sesion.component';
+import { BrowserModule } from '@angular/platform-browser';
 
 @NgModule({
   declarations: [
@@ -14,27 +16,14 @@ import { IniciarSesionComponent } from './iniciar_sesion.component';
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
-  ],
-  providers: [],
-
-import { NgModule } from '@angular/core';
-import { provideHttpClient } from '@angular/common/http';
-
-import { AppComponent } from './app.component';
-import { DataService } from './data.service';
-
-@NgModule({
-  declarations: [
-    AppComponent
-  ],
-  imports: [
-    BrowserModule,
       ],
   providers: [
     provideHttpClient(),
     DataService],
-
+=======
+    AppRoutingModule
+  ],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
