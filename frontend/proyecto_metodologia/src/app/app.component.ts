@@ -1,23 +1,15 @@
-import { Component, OnInit } from '@angular/core';
-import { DataService } from './data.service';
+import { Component } from '@angular/core';
+import { Router } from '@angular/router'; // Asegúrate de importar Router
 
 @Component({
   selector: 'app-root',
-  template: `
-    <ul>
-      <li *ngFor="let item of data">{{ item.nombre }}</li>
-    </ul>
-  `,
+  templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent implements OnInit {
-  data: any[] = [];
+export class AppComponent {
+  constructor(private router: Router) {} 
 
-  constructor(private dataService: DataService) { }
-
-  ngOnInit(): void {
-    this.dataService.getData().subscribe((response: any[]) => {
-      this.data = response;
-    });
+  navigateToLogin() {
+    this.router.navigate(['/login']); 
   }
 }
