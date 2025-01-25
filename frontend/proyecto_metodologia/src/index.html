@@ -6,14 +6,20 @@
   <link rel="stylesheet" href="styles.css">
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    .carrusel_inicio img {
+      display: none;
+    }
+    .carrusel_inicio img.active {
+      display: block;
+    }
   </style>
 </head>
 <body>
   <header>
     <div class="titulo">Obten empleo fácil</div>
     <div class="logueo_registro">
-      <button  class="registro" id="registro">Registrarse</button>
-      <button  class="ini_sesion" id="ini_sesion">Iniciar sesión</button>
+      <button class="registro" id="registro">Registrarse</button>
+      <button class="ini_sesion" id="ini_sesion">Iniciar sesión</button>
     </div>
   </header>
   <div class="carrusel_inicio">
@@ -23,9 +29,9 @@
     <img src="assets/4.jpg" width="500" height="300">
   </div>
   <p class="open-sans-unique">Las personas neurodivergentes poseen habilidades únicas que pueden ser altamente beneficiosas para diversos roles laborales. Esto no solo beneficia a las personas neurodivergentes, sino que también enriquece las organizaciones al diversificar sus talentos y enfoques.</p>
-  <a class="open-sans-unique"alt="aprende "> Aprende a utilizar la página haciendo click aquí</a>
+  <a class="open-sans-unique" alt="aprende "> Aprende a utilizar la página haciendo click aquí</a>
   <footer></footer>
-  <script src="script.js">
+  <script>
 document.addEventListener("DOMContentLoaded", function() {
   document.getElementById("registro").onclick = function() {
     window.location.href = "assets/select_type_user.html";
