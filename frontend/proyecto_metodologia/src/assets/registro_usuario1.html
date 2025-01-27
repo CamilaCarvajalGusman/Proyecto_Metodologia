@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Registrar usuario</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    body {
+      background: linear-gradient(to bottom, #1E90FF, #32CD32) no-repeat fixed;
+      font-family: "Open Sans", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: " imagen form";
+    }
+    form{
+        grid-area:form;
+    }
+    select, option{
+        font-family: "Open Sans", serif;
+    }
+    center {
+      padding-top: 60px;
+      grid-area: seleccionar;
+    }
+
+    #imagen {
+      grid-area: imagen;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      padding: 15px 30px;
+      margin: 10px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      display: flex;
+      align-self: center;
+    }
+
+    button:hover {
+      background-color: #1E90FF;
+    }
+    textarea, input{
+        border-radius: 5px;
+        width: 200px;
+        height: 20px;
+    }
+  </style>
+</head>
+<body>
+<div id="imagen">
+    <img src="personas3.jpg" width="400" height="395">
+</div>
+<form >
+    <h3>Datos Personales</h3>
+    <label>Nombre(s): </label><textarea></textarea><br>
+    <label>Apellido(s): </label><textarea></textarea><br>
+    <label>Teléfono: </label><textarea></textarea><br>
+    <label>Correo Electrónico: </label><textarea></textarea><br>
+    <label>Contraseña: </label><input type="password" id="password"><br>
+    <label>Confirmar Contraseña: </label><input type="password" id="password"><br>
+    <label>Fecha de Nacimiento: </label><br><textarea></textarea><br>
+    <label>Carnet de Identidad: </label><textarea></textarea><br>
+    <label>Departamento: </label><select>
+        <option>La Paz</option>
+        <option>Cochabamba</option>
+        <option>Santa Cruz</option>
+        <option>Beni</option>
+        <option>Pando</option>
+        <option>Chuquisaca</option>
+        <option>Tarija</option>
+        <option>Oruro</option>
+        <option>Potosí</option>
+    </select><br>
+    <button id="siguiente">Siguiente</button>
+</form>
+<script>
+document.getElementById("siguiente").onclick = function() {
+       window.location.href = "registro_usuario2.html";
+};
+</script>
+</body>
+</html>
