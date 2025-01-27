@@ -1,0 +1,144 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Registrar empresa</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+    body {
+      background: linear-gradient(to bottom, #1E90FF, #32CD32) no-repeat fixed;
+      font-family: "Open Sans", serif;
+      font-optical-sizing: auto;
+      font-weight: 600;
+      font-style: normal;
+      font-variation-settings: "wdth" 100;
+      margin: 0;
+      padding: 0;
+      height: 100vh;
+      display: grid;
+      grid-template-rows: auto;
+      grid-template-columns: 1fr 2fr 1fr;
+      grid-template-areas: "imagen1 form imagen2";
+    }
+
+    #img_left {
+      grid-area: imagen1;
+      
+    }
+
+    #img_right {
+      grid-area: imagen2;
+      
+    }
+
+    form {
+      grid-area: form;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      padding: 20px;
+      border-radius: 10px;
+    }
+
+    .form-group {
+      display: flex;
+      align-items: center;
+      margin:2px;
+    }
+
+    label {
+      font-family: "Open Sans", serif;
+      font-size: small;
+      margin-right: 10px;
+    }
+
+    textarea {
+      width: 200px;
+      height: 20px;
+      padding: 5px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+    }
+
+    button {
+      background-color: white;
+      color: black;
+      padding: 15px 30px;
+      margin: 10px 0;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+      transition: background-color 0.3s ease;
+      align-self: center;
+    }
+    select, option{
+        font-family: "Open Sans", serif;
+    }
+    button:hover {
+      background-color: #1E90FF;
+    }
+  </style>
+</head>
+<body>
+  <div id="img_left">
+    <img src="personas2.jpg" width="200" height="600">
+  </div>
+  <form>
+    <h3>Datos de la empresa y del empleador</h3>
+    <div class="form-group">
+      <label for="nombre">Nombre(s) del empleador:</label>
+      <textarea id="nombre"></textarea>
+    </div>
+    <div class="form-group">
+      <label for="apellido">Apellido(s) del empleador:</label>
+      <textarea id="apellido"></textarea>
+    </div>
+    <div class="form-group">
+        <label for="apellido">Empresa/organización:</label>
+        <textarea></textarea>
+    </div>
+    <div class="form-group">
+        <label >Dirección:</label>
+        <textarea ></textarea>
+    </div>
+    <div class="form-group">
+        <label >NIT de la empresa:</label>
+        <textarea ></textarea>
+    </div>
+    <div class="form-group">
+        <label >Nit:</label>
+        <textarea ></textarea>
+    </div>
+    <div class="form-group">
+        <label >Teléfono:</label>
+        <textarea ></textarea>
+    </div>
+    <div class="form-group">
+        <label >Correo institucional:</label>
+        <textarea ></textarea>
+    </div>
+    <div class="form-group">
+      <label>Contraseña: </label><input type="password" id="password"><br>
+    </div>
+    <div>
+      <label>Confirmar Contraseña: </label><input type="password" id="password"><br>
+    </div>    
+    <label>Departamento: </label><select>
+        <option>La Paz</option>
+        <option>Cochabamba</option>
+        <option>Santa Cruz</option>
+        <option>Beni</option>
+        <option>Pando</option>
+        <option>Chuquisaca</option>
+        <option>Tarija</option>
+        <option>Oruro</option>
+        <option>Potosí</option>
+    </select><br>
+    <button id="registrar">Registrar</button>
+  </form>
+  <div id="img_right">
+    <img src="personas3.jpg" width="200" height="600">
+  </div>
+</body>
+</html>

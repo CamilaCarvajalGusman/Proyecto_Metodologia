@@ -46,7 +46,7 @@
       font-size: 16px;
       transition: background-color 0.3s ease;
       display: flex;
-      align-self: center;
+      align-self: right;
     }
 
     button:hover {
@@ -57,15 +57,22 @@
         width: 200px;
         height: 20px;
     }
+    #cv{
+      width: 400px;
+      height: 30px;
+    }
+   #TEA{
+    font-size: smaller;
+   }
   </style>
 </head>
 <body>
 <div id="imagen">
-    <img src="personas3.jpg" width="400" height="395">
+    <img src="personas3.jpg" width="400" height="1050">
 </div>
 <form >
-    <h3>Información Personal</h3>
-    <label>Marca el grado de estudios que posees: </label><textarea></textarea><br>
+    <h3>Datos Personales</h3>
+    <label>Nombre(s): </label><textarea></textarea><br>
     <label>Apellido(s): </label><textarea></textarea><br>
     <label>Teléfono: </label><textarea></textarea><br>
     <label>Correo Electrónico: </label><textarea></textarea><br>
@@ -84,12 +91,29 @@
         <option>Oruro</option>
         <option>Potosí</option>
     </select><br>
-    <button id="siguiente">Siguiente</button>
+    <h3>Información Personal</h3>
+    <label>Marca el grado de estudios que posees: </label>
+      <input type="radio">Bachiller
+      <input type="radio">Técnico
+      <input type="radio">Licenciatura
+      <input type="radio">Maestría
+  <br>
+  <label>Profesión laboral: </label><textarea></textarea>
+  <label>Currículum: </label><textarea id="cv">Añade el link hacia una carpeta de drive hacia tu cv</textarea>
+  <label>¿Cuál es tu diagnóstico dentro de la neurodiversidad?</label>
+  <input type="radio">TDA
+  <input type="radio">TDAH
+  <input type="radio">TOC
+  <input type="radio">DISPRAXIA
+  <input type="radio">DISACULIA
+  <input type="radio">DISLEXIA
+  <input type="radio">SÍNDROME DE TOURETTE
+  <input type="radio" >Autismo (TEA)  <br>
+  <label>Si eres autista, ¿cuál es tu grado de apoyo?</label>
+  <input type="radio">grado 1
+  <input type="radio">grado 2
+  <input type="radio">grado 3
+  <button type="submit">Registrar</button>
 </form>
-<script>
-document.getElementById("siguiente").onclick = function() {
-       window.location.href = "registro_usuario2.html";
-};
-</script>
 </body>
 </html>
