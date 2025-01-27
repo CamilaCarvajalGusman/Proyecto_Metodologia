@@ -6,7 +6,7 @@
   <style>
     @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
     body {
-      background: linear-gradient(to bottom, #1E90FF, #32CD32) no-repeat fixed; 
+      background: linear-gradient(to bottom, #1E90FF, #32CD32) no-repeat fixed;
       font-family: "Open Sans", serif;
       font-optical-sizing: auto;
       font-weight: 600;
@@ -15,10 +15,19 @@
       margin: 0;
       padding: 0;
       height: 100vh;
+      display: grid;
+      grid-template-rows: 100%;
+      grid-template-columns: 50% 50%;
+      grid-template-areas: "seleccionar imagen";
     }
 
     center {
       padding-top: 60px;
+      grid-area: seleccionar;
+    }
+
+    #imagen {
+      grid-area: imagen;
     }
 
     button {
@@ -40,21 +49,23 @@
 </head>
 <body>
   <center>
-    <h1>Selecciona el tipo de usuario</h1>
-    <button id="empleador">Empleador</button>
+    <h1>Registro de Usuario</h1>
+    <p>Seleccione con qué clase de usuario desea registrarse</p>
     <button id="usuario">Usuario</button>
+    <button id="empleador">Empleador</button>
   </center>
+  <div id="imagen">
+    <img src="assets/4.jpg" width="500" height="395">
+  </div>
   <script>
     document.getElementById("empleador").onclick = function() {
       console.log("Empleador seleccionado");
-      
-      // window.location.href = "empleador.html";
+       window.location.href = "empleador.html";
     };
 
     document.getElementById("usuario").onclick = function() {
       console.log("Usuario seleccionado");
-      
-      // window.location.href = "usuario.html";
+       window.location.href = "usuario.html";
     };
   </script>
 </body>
