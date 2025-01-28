@@ -1,8 +1,82 @@
-<html>
-    <head>
-        <title>Usuario Neurodivergente</title>
-    </head>
-    <body>
-        
-    </body>
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Usuario Neurodivergente</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+        body {
+          background: linear-gradient(to bottom, #1E90FF, #32CD32) no-repeat fixed;
+          font-family: "Open Sans", serif;
+          font-optical-sizing: auto;
+          font-weight: 600;
+          font-style: normal;
+          font-variation-settings: "wdth" 100;
+          margin: 0;
+          padding: 0;
+          height: 100vh;
+        }
+        #encabezado, #titulo {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        #cuerpo {
+            display: grid;
+            grid-template-rows: "2fr";
+            grid-template-columns: "1fr 1fr";
+            grid-template-areas: "skills entrevistas";
+        }
+        #skills {
+            grid-area: skills;
+        }
+        #entrevistas {
+            grid-area: entrevistas;
+        }
+        button {
+            background-color: white;
+            color: black;
+            padding: 10px;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+            transition: background-color 0.3s ease;
+            display: block;
+            justify-content: center;
+        }
+        h3 {
+            color: white;
+        }
+        #logo img {
+            width: 50px; 
+            height: 50px; 
+            border-radius: 30px;
+        }
+        button:hover {
+            background-color: #1E90FF;
+        }
+    </style>
+</head>
+<body>
+    <div id="encabezado">
+        <div id="logo"><img src="https://vangogh.teespring.com/v3/image/Gwua3vgU2nirvF5Uo_XqvC-_IP4/560/560.jpg" alt="logo"></div>
+        <div id="perfil"><a src="perfil_usuario.html">Perfil</a></div>
+        <div id="empleos">Ofertas de Trabajo</div>
+        <div id="notificaciones">Notificaciones</div>
+    </div>
+    <div id="titulo">
+        <h1>Bienvenido, </h1> <!-- nombre de usuario al iniciar sesión -->
+    </div>
+    <div id="cuerpo">
+        <div id="skills">
+            <h3>Skills como empleado</h3>
+            <button>Agregar skill</button>
+        </div>
+        <div id="entrevistas">
+            <h3>Futuras entrevistas</h3>
+        </div>
+    </div>
+</body>
 </html>
